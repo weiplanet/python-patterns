@@ -46,7 +46,7 @@ class Subscriber:
         self.provider.unsubscribe(msg, self)
 
     def run(self, msg):
-        print("{} got {}".format(self.name, msg))
+        print(f"{self.name} got {msg}")
 
 
 def main():
@@ -65,7 +65,7 @@ def main():
     >>> vani.subscribe("movie")
     >>> vani.unsubscribe("movie")
 
-    # Note that no one subscirbed to `ads`
+    # Note that no one subscribed to `ads`
     # and that vani changed their mind
 
     >>> fftv.publish("cartoon")
